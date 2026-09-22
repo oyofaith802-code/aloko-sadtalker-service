@@ -4,6 +4,7 @@ import uuid
 import shutil
 import subprocess
 import threading
+import sys
 from pathlib import Path
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
@@ -59,7 +60,7 @@ def process_job(job_id, avatar_path, audio_path):
         )
 
         command = [
-            "python",
+            sys.executable,
             str(BASE_DIR / "inference.py"),
             "--source_image",
             str(avatar_path),
@@ -268,3 +269,4 @@ def get_job(job_id: str):
         )
 
     return job
+
