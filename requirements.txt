@@ -16,7 +16,7 @@ yacs==0.1.8
 pyyaml
 joblib==1.1.0
 scikit-image==0.19.3
-basicsr==1.4.2
+git+https://github.com/XPixelGroup/BasicSR.git
 facexlib==0.3.0
 gfpgan
 av
